@@ -19,3 +19,15 @@ class Instructor < Person
     puts "Everything in Ruby is an Object!"
   end#teach
 end#Instructor
+
+# 6. Create an instance of Instructor whose name is "Chris" and call his greeting.
+
+chris = Instructor.new('Chris')
+
+# 7. Create an instance of Student whose name is "Cristina" and call her greeting.
+
+cristina = Student.new('Cristina')
+
+# 8(a) Call the teach method on your instructor instance and call the learn method on your student.
+
+# 8(b) Next, call the teach method on your student instance. What happens? Why doesn't that work? Leave a comment in your program explaining why.
