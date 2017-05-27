@@ -2,6 +2,9 @@ class Person
   def initializer(name)
     @name = name
   end#initializer
+  def greeting
+    puts "Hi, my name is #{name}"
+  end#greeting
 end#Person
 
 
