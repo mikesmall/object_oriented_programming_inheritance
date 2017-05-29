@@ -8,13 +8,18 @@ class System
   def add(celestial_body)
     @@bodies << celestial_body
   end#@add
+
   #  instance method called total_mass which should add up the mass of all the bodies in bodies, and return it.
+
   def total_mass
     total_mass = 0
     @@bodies.each do |mass|
     total_mass += mass
+    puts "Total mass of celestial bodies is #{ total_mass }."
     end#each
+    total_mass
   end#total_mass
+
 end#System
 
 class Body
@@ -60,11 +65,9 @@ end#Moon
 
 ## Once we have our structure defined, let's start adding some things to our solar system. We can start with the Sun, the Earth, and the Earth's moon.
 # The Sun (Star)
-sun = Star.new("The Sun", 2000000)
+sun = Star.new("The Sun", 2000000, "Yellow, which gives Superman his powers.")
 # The Earth (Planet)
-earth = Planet.new("The Earth", 50000)
+earth = Planet.new("The Earth", 50000, 24, 365)
 # The Moon (Moon)
-moon = Moon.new("The Moon", 1000)
+moon = Moon.new("The Moon", 1000, 30, earth)
 #  Don't worry too much about getting the masses correct, any number really will do, although you can find their masses on Wikipedia if you want.
-
-total_mass
