@@ -82,7 +82,13 @@ class QuoteCollector < Multilinguist
   end#new_quote
 
   def random_quote
-    @favourite_quotes.sample 
+    msg = "#{ @favourite_quotes.sample }"
+    # self.travel_to.rand
+    # ^^^^^^^^^^^^^^^^^^^ Best guess, returns an error.
+    #  I have no idea how to randomly-select a language here.
+    #  That 'query' business higher-up on this page is completely unfamiliar.
+    #  This method will only output in English.
+    say_in_local_language(msg)
   end#random_quote
 
 end#QuoteCollector
@@ -97,7 +103,7 @@ puts me.report_total([324,245,6,343647,686545]) # È Il totale 1030767
 
 # Test QuoteCollector outputs:
 mavis = QuoteCollector.new("Mavis")
-mavis.new_quote("Oh Henry!")
-mavis.new_quote("Ooh, Alberto.")
-mavis.new_quote("Oh, Mylanta!")
+mavis.new_quote("I don't like sand.")
+mavis.new_quote("That's not how the Force works!")
+mavis.new_quote("Make it so!")
 puts mavis.random_quote
