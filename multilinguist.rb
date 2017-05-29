@@ -81,6 +81,10 @@ class QuoteCollector < Multilinguist
     @favourite_quotes << quote
   end#new_quote
 
+  def random_quote
+    @favourite_quotes.sample 
+  end#random_quote
+
 end#QuoteCollector
 
 # Test MathGenius outputs:
@@ -92,5 +96,8 @@ me.travel_to("Italy")
 puts me.report_total([324,245,6,343647,686545]) # È Il totale 1030767
 
 # Test QuoteCollector outputs:
-mike = QuoteCollector.new
-mike.new_quote("That's not how the Force works!")
+mavis = QuoteCollector.new("Mavis")
+mavis.new_quote("Oh Henry!")
+mavis.new_quote("Ooh, Alberto.")
+mavis.new_quote("Oh, Mylanta!")
+puts mavis.random_quote
